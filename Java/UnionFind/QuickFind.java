@@ -23,6 +23,13 @@ public class QuickFind implements UnionFind {
         count = n;
     }
 
+    @Override
+    public void print() {
+        for (int i: id) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 
     @Override
     public void union(int p, int q) {

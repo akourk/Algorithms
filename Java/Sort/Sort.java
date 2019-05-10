@@ -28,17 +28,9 @@ public class Sort {
         }
     }
 
-    //    private static boolean less(Comparable j, Comparable i) {
-//        return j.compareTo(i) < 0;
-//    }
-//    private static boolean less(Comparable j, Comparable i) {
-//        return j.compareTo(i) < 0;
-//    }
     private static boolean less(Comparable i, Comparable j) {
         return i.compareTo(j) < 0;
     }
-
-
 
 
     public static void bubbleSort(Comparable[] a) {
@@ -53,13 +45,6 @@ public class Sort {
 //        }
 
         // fatma's version
-//        for (int i = 0; i < a.length; i++) {
-//            for (int j = a.length-1; j > i; j--) {
-//                if (less(a[j], a[j-1])) {
-//                    swap(a, j-1, j);
-//                }
-//            }
-//        }
         for (int i = 0; i < a.length; i++) {
             for (int j = a.length-1; j > i; j--) {
                 if (less(a[j], a[j-1])) {
@@ -170,9 +155,10 @@ public class Sort {
         }
 
         if (largest != i) {
-            Comparable swap = a[i];
-            a[i] = a[largest];
-            a[largest] = swap;
+            swap(a, i, largest);
+//            Comparable swap = a[i];
+//            a[i] = a[largest];
+//            a[largest] = swap;
 
             heapify(a, n, largest);
         }
